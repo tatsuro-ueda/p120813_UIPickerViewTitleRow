@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource>
+{
+    NSDictionary    *dic;
+    NSArray         *array;
+    NSString        *restaurantName;
+}
+@property (strong, nonatomic) IBOutlet UIPickerView *picker;
+- (IBAction)change:(id)sender;
 @end
